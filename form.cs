@@ -45,7 +45,7 @@ namespace GDILibrary
             g.DrawEllipse(pen, 215, 160, 100, 100);
             
 
-            //создаем 3 прямоугольника
+            
             //отступ слева экрана 400, отступ сверху 50, ширина 200, высота 50
             Rectangle rect = new Rectangle(500, 50, 500, 100);
             Rectangle rect2 = new Rectangle(500, 200, 500, 100);
