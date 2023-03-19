@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ using static System.Console;
 namespace InterfacesWPU221
 {
     //1 способ создания своего исключения - создание класса, описывающего наше исключение
-    public class MyException : ApplicationException
+    /*public class MyException : ApplicationException
     {
         private string _message;
         public DateTime TimeException { get; private set; }
@@ -29,11 +29,11 @@ namespace InterfacesWPU221
         {
             get { return _message; }
         }
-    }
+    }*/
 
     //3 способ. Пишем Exception, нажимаем 2 раза Tab
 
-    [Serializable]
+    /*[Serializable]
     public class MyException1 : Exception
     {
         public DateTime TimeException { get; private set; }
@@ -45,13 +45,51 @@ namespace InterfacesWPU221
         protected MyException1(
           System.Runtime.Serialization.SerializationInfo info,
           System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }*/
+
+    //синтаксис  try-catch-finally
+    /*
+    try{
+        //код, в котором может возникнуть исключение
     }
+    catch (тип_исключения)
+    {
+        //обработка исключения
+    }
+    finally
+    {
+        //освобождение ресурсов
+    }*/
 
     class Exceptions
     {
         static void Main(string[] args)
         {
-            
+            try//внешний блок
+            {
+                //код А
+                try//внутренний блок
+                {
+                    //код B
+                }
+                catch
+                {
+                    //код C
+                }
+                finally
+                {
+                    //очистка
+                }
+                //код D
+            }
+            catch
+            {
+                //обработка ошибок
+            }
+            finally
+            {
+                //очистка
+            }
         }
     }
 }
