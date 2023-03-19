@@ -25,6 +25,11 @@ namespace InterfacesWPU221
         public DateTime birthDate { get; set; }
         public string group { get; set; }
         public StudentCard StudentCard { get; set; }
+
+        public override string ToString()
+        {
+            return $"Имя: {firstName}\nФамилия: {lastName}\nДата рождения: {birthDate.ToLongDateString()}\nФакультет: {group}\n" + StudentCard.ToString();
+        }
     }
 
     class Auditory:IEnumerable
@@ -85,6 +90,11 @@ namespace InterfacesWPU221
         {
             Array.Sort(students);
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return students.GetEnumerator();
+        }
     }
 
     class InterfacesWPU221
@@ -92,7 +102,8 @@ namespace InterfacesWPU221
         static void Main(string[] args)
         {
             Auditory auditory = new Auditory();
-            WriteLine("Список студентов");
+            WriteLine("************Список студентов*****************");
+            WriteLine();
             foreach(Student student in auditory)
             {
                 WriteLine(student);
