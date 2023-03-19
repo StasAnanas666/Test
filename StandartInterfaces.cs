@@ -18,7 +18,7 @@ namespace InterfacesWPU221
         }
     }
 
-    class Student
+    class Student:IComparable
     {
         public string firstName { get; set; }
         public string lastName { get; set; }
@@ -29,6 +29,15 @@ namespace InterfacesWPU221
         public override string ToString()
         {
             return $"Имя: {firstName}\nФамилия: {lastName}\nДата рождения: {birthDate.ToLongDateString()}\nФакультет: {group}\n" + StudentCard.ToString();
+        }
+
+        public int CompareTo(object obj)
+        {
+            if(obj is Student)
+            {
+                return lastName.CompareTo((obj as Student).lastName);
+            }
+            throw new NotImplementedException();
         }
     }
 
@@ -105,6 +114,13 @@ namespace InterfacesWPU221
             WriteLine("************Список студентов*****************");
             WriteLine();
             foreach(Student student in auditory)
+            {
+                WriteLine(student);
+            }
+            WriteLine("************Список студентов после сортировки*****************");
+            WriteLine();
+            auditory.Sort();
+            foreach (Student student in auditory)
             {
                 WriteLine(student);
             }
