@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +27,7 @@ namespace InterfacesWPU221
         public StudentCard StudentCard { get; set; }
     }
 
-    class Auditory
+    class Auditory:IEnumerable
     {
         Student[] students =
         {
@@ -79,13 +80,23 @@ namespace InterfacesWPU221
                 }
             }
         };
+
+        public void Sort()
+        {
+            Array.Sort(students);
+        }
     }
 
     class InterfacesWPU221
     {
         static void Main(string[] args)
         {
-            
+            Auditory auditory = new Auditory();
+            WriteLine("Список студентов");
+            foreach(Student student in auditory)
+            {
+                WriteLine(student);
+            }
         }
     }
 }
