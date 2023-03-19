@@ -100,9 +100,26 @@ namespace InterfacesWPU221
             Array.Sort(students);
         }
 
+        public void Sort(IComparer comparer)
+        {
+            Array.Sort(students, comparer);
+        }
+
         IEnumerator IEnumerable.GetEnumerator()
         {
             return students.GetEnumerator();
+        }
+    }
+
+    class DataComparer : IComparer
+    {
+        public int Compare(object x, object y)
+        {
+            if(x is Student && y is Student)
+            {
+                return DateTime.Compare((x as Student).birthDate, (y as Student).birthDate);
+            }
+            throw new NotImplementedException();
         }
     }
 
@@ -117,9 +134,17 @@ namespace InterfacesWPU221
             {
                 WriteLine(student);
             }
-            WriteLine("************Список студентов после сортировки*****************");
+            WriteLine("***********Сортировка по фамилии************");
             WriteLine();
             auditory.Sort();
+            foreach (Student student in auditory)
+            {
+                WriteLine(student);
+            }
+
+            WriteLine("***********Сортировка по дате рождения************");
+            WriteLine();
+            auditory.Sort(new DataComparer());
             foreach (Student student in auditory)
             {
                 WriteLine(student);
