@@ -165,6 +165,21 @@ namespace InterfacesWPU221
                     salary=15000
                 }
             };
+
+            WriteLine(director);
+            if(director is IManager)
+            {
+                director.Control();
+            }
+
+            foreach(IWorker item in director.ListOfWorkers)
+            {
+                WriteLine(item);
+                if (item.IsWorking)
+                {
+                    WriteLine(item.Work());
+                }
+            }
         }
     }
 }
