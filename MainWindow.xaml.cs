@@ -48,9 +48,31 @@ namespace WpfApp3
             progBar.Value = e.ProgressPercentage;
         }
 
+        private byte red;
+        private byte green;
+        private byte blue;
+
+        private void UpdateColor()
+        {
+            this.Background = new SolidColorBrush(Color.FromRgb(red, green, blue));
+        }
+
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
+            red = Convert.ToByte(slider1.Value);
+            UpdateColor();
+        }
 
+        private void Slider_ValueChanged_1(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            green = Convert.ToByte(slider2.Value);
+            UpdateColor();
+        }
+
+        private void Slider_ValueChanged_2(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            blue = Convert.ToByte(slider3.Value);
+            UpdateColor();
         }
     }
 }

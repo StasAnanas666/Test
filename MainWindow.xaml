@@ -18,9 +18,9 @@
         <ProgressBar HorizontalAlignment="Left" Height="51" Margin="56,67,0,0" VerticalAlignment="Top" Width="281" x:Name="progBar" SmallChange="1"/>
         <Label Content="Loading..." HorizontalAlignment="Left" Margin="56,23,0,0" VerticalAlignment="Top" Height="39" Width="172" FontSize="22"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="56,153,0,0" VerticalAlignment="Top" Width="131" Height="20" Click="Button_Click"/>
-        <Slider Grid.Column="1" HorizontalAlignment="Left" Margin="55.2,46,0,0" VerticalAlignment="Top" Height="29" Width="277" AutoToolTipPlacement="TopLeft" TickPlacement="BottomRight" Delay="500" AutoToolTipPrecision="0" AllowDrop="False" Maximum="255" TickFrequency="5" ValueChanged="Slider_ValueChanged"/>
-        <Slider Grid.Column="1" HorizontalAlignment="Left" Margin="55.2,86,0,0" VerticalAlignment="Top" Height="29" Width="277" AutoToolTipPlacement="TopLeft" TickPlacement="BottomRight" Delay="500" AutoToolTipPrecision="0" AllowDrop="False" Maximum="255" TickFrequency="5"/>
-        <Slider Grid.Column="1" HorizontalAlignment="Left" Margin="55.2,126,0,0" VerticalAlignment="Top" Height="29" Width="277" AutoToolTipPlacement="TopLeft" TickPlacement="BottomRight" Delay="500" AutoToolTipPrecision="0" AllowDrop="False" Maximum="255" TickFrequency="5"/>
+        <Slider Grid.Column="1" HorizontalAlignment="Left" Margin="55.2,46,0,0" VerticalAlignment="Top" Height="29" Width="277" AutoToolTipPlacement="TopLeft" TickPlacement="BottomRight" Delay="500" AutoToolTipPrecision="0" AllowDrop="False" Maximum="255" TickFrequency="5" ValueChanged="Slider_ValueChanged" x:Name="slider1"/>
+        <Slider Grid.Column="1" HorizontalAlignment="Left" Margin="55.2,86,0,0" VerticalAlignment="Top" Height="29" Width="277" AutoToolTipPlacement="TopLeft" TickPlacement="BottomRight" Delay="500" AutoToolTipPrecision="0" AllowDrop="False" Maximum="255" TickFrequency="5" ValueChanged="Slider_ValueChanged_1" x:Name="slider2"/>
+        <Slider Grid.Column="1" HorizontalAlignment="Left" Margin="55.2,126,0,0" VerticalAlignment="Top" Height="29" Width="277" AutoToolTipPlacement="TopLeft" TickPlacement="BottomRight" Delay="500" AutoToolTipPrecision="0" AllowDrop="False" Maximum="255" TickFrequency="5" ValueChanged="Slider_ValueChanged_2" x:Name="slider3"/>
 
     </Grid>
 </Window>
