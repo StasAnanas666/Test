@@ -1,0 +1,66 @@
+﻿<Window x:Class="WpfApp3.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListBox>
+            <ListBoxItem Content="Red"/>
+            <Separator/>
+            <ListBoxItem Content="Orange" IsSelected="True"/>
+            <Separator/>
+            <ListBoxItem Content="Yellow"/>
+            <Separator/>
+            <ListBoxItem Content="Green"/>
+            <Separator/>
+            <ListBoxItem Content="LightBlue"/>
+            <ComboBoxItem Content="Blue"/>
+            <Separator/>
+            <ComboBoxItem Content="Purple"/>
+            <Separator/>
+            <ComboBoxItem Content="!!!!"/>
+            <Separator/>
+        </ListBox>
+        <ComboBox Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0.2,0,-0.4,0" Width="397">
+            <ComboBoxItem Content="Russia"/>
+            <ComboBoxItem Content="Spain"/>
+            <ComboBoxItem Content="England"/>
+            <ComboBoxItem Content="Brazil"/>
+            <ComboBoxItem Content="Vietnam"/>
+        </ComboBox>
+        <TreeView Grid.Row="1">
+            <TreeViewItem Header="England">
+                <TreeViewItem Header="London"/>
+                <TreeViewItem Header="Manchester"/>
+                <TreeViewItem Header="Nottingham"/>
+            </TreeViewItem>
+            <TreeViewItem Header="Russia">
+                <TreeViewItem Header="Moscow"/>
+                <TreeViewItem Header="Ekaterinbourg"/>
+                <TreeViewItem Header="Rostov"/>
+            </TreeViewItem>
+            <TreeViewItem Header="France">
+                <TreeViewItem Header="Paris"/>
+                <TreeViewItem Header="Bordo"/>
+                <TreeViewItem Header="Marselle"/>
+            </TreeViewItem>
+            <TreeViewItem Header="Italy">
+                <TreeViewItem Header="Rome"/>
+                <TreeViewItem Header="Florence"/>
+                <TreeViewItem Header="Milan"/>
+            </TreeViewItem>
+        </TreeView>
+
+    </Grid>
+</Window>
