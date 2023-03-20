@@ -47,6 +47,11 @@ namespace WpfApp3
         {
             progBar.Value = e.ProgressPercentage;
         }
+
+        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
     }
 }
 
